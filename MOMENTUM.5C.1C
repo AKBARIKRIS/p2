@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<conio.h>
+
+ void main()
+{
+   int units,bill,sc,total_bill;
+   clrscr();
+   printf("  enter your electricity unit=");
+   scanf("%d",&units);
+
+   if(units<=50)
+     {  bill=units*0.50; }
+
+   else if(units<=150)
+     {  bill=(units-50)*0.75+25;  }
+
+   else if(units<=250)
+     {  bill=(units-150)*1.20+100; }
+
+   else
+     {  bill=(units-250)*1.50+200; }
+
+   sc=bill*20/100;
+   printf("  surcharge is = %d \n",sc);
+
+   total_bill=sc+bill;
+   printf("  your electricity bill is=%d",total_bill);
+
+   getch();
+}
+
+
